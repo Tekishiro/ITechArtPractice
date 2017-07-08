@@ -63,3 +63,6 @@ E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicSto
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.xml
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\EntityFramework.dll
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\EntityFramework.xml
