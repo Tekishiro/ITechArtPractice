@@ -88,3 +88,4 @@ E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicSto
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\EntityFramework.SqlServerCompact.dll
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\System.Data.SqlServerCe.dll
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\EntityFramework.SqlServerCompact.xml
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
