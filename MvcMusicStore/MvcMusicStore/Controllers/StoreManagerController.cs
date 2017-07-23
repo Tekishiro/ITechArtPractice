@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MvcMusicStore.Models;
+using PagedList;
 
 namespace MvcMusicStore.Controllers
 {
@@ -16,10 +17,17 @@ namespace MvcMusicStore.Controllers
         private MusicStoreEntities db = new MusicStoreEntities();
 
         // GET: StoreManager
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre);
-            return View(albums.ToList());
+
+            //need to sort dataset to work with paged list
+            albums = albums.OrderBy(s => s.GenreId);
+
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+
+            return View(albums.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: StoreManager/Details/5
@@ -52,7 +60,7 @@ namespace MvcMusicStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && album.GenreId != null && album.GenreId != 0)
             {
                 db.Albums.Add(album);
                 db.SaveChanges();

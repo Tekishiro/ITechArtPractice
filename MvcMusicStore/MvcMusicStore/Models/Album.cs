@@ -15,6 +15,7 @@ namespace MvcMusicStore.Models
         public int AlbumId { get; set; }
 
         [DisplayName("Genre")]
+        [Required(ErrorMessage = "You must choose album genre")]
         public int GenreId { get; set; }
 
         [DisplayName("Artist")]

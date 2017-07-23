@@ -89,3 +89,7 @@ E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicSto
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\System.Data.SqlServerCe.dll
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\EntityFramework.SqlServerCompact.xml
 E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\PagedList.dll
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\PagedList.Mvc.dll
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\PagedList.xml
+E:\Мои файлы\Учеба\Практика\Tasks\MvcMusicStore\MvcMusicStore\bin\PagedList.Mvc.xml

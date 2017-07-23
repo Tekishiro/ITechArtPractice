@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MvcMusicStore.Models.Album>
+﻿@model PagedList.IPagedList<MvcMusicStore.Models.Album>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @helper Truncate(string input, int length)
     {
@@ -22,16 +24,20 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Artist.Name)
+            @*@Html.DisplayNameFor(model => model.Artist.Name)*@
+            Artist
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Genre.Name)
+            @*@Html.DisplayNameFor(model => model.Genre.Name)*@
+            Genre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @*@Html.DisplayNameFor(model => model.Title)*@
+            Title
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            @*@Html.DisplayNameFor(model => model.Price)*@
+            Price
         </th>
         <th></th>
     </tr>
@@ -59,3 +65,8 @@
 }
 
 </table>
+
+<br />
+Page @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

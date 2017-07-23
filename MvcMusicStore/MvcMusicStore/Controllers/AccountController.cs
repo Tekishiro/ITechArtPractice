@@ -70,6 +70,13 @@ namespace Mvc3ToolsUpdateWeb_Default.Controllers
 
         public ActionResult Register()
         {
+            //try
+            //{
+            //    Membership.DeleteUser("ShiroAdmin");
+            //    Membership.DeleteUser("ShiroAdmininistrator");
+            //}
+            //catch { }
+
             return View();
         }
 
@@ -85,8 +92,18 @@ namespace Mvc3ToolsUpdateWeb_Default.Controllers
                 MembershipCreateStatus createStatus;
                 Membership.CreateUser(model.UserName, model.Password, model.Email, "question", "answer", true, null, out createStatus);
 
+
+                //Roles.CreateRole("Administrator");
+
+
                 if (createStatus == MembershipCreateStatus.Success)
                 {
+                    //try to add role to particular user
+                    if (model.UserName == "ShiroAdmin")
+                    {
+                        Roles.AddUserToRole(model.UserName, "Administrator");
+                    }
+
                     MigrateShoppingCart(model.UserName);
 
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);

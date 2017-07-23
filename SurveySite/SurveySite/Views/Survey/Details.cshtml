@@ -1,0 +1,35 @@
+﻿@model SurveySite.ViewModels.Survey
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.SurveyQuestion.Text</h2>
+
+@if (Model.SurveyAnswers.Count > 1)
+{
+    using (Html.BeginForm())
+    {
+        foreach (var answvar in Model.SurveyAnswers)
+        {
+        <div>
+            <input type="radio" name="ChoosenAnswer"
+                    value="@answvar.AnswerVariantId" data-val-required="You must choose album genre" />@answvar.Text
+        </div>
+        }
+        <input type="hidden" name="QuestId" value="@Model.SurveyQuestion.QuestionId" />
+     <div>
+         <input type="submit" value="Submit answer" />
+     </div>
+    }
+}
+else
+{
+    <p>You already passed this survey.</p>
+    <p>Your answer was: </p>
+    foreach (var answvar in Model.SurveyAnswers)
+    {
+        <li>@answvar.Text</li>
+    }
+}
+

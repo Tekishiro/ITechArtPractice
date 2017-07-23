@@ -18,7 +18,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.GenreId, "GenreId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("GenreId", null, htmlAttributes: new { @class = "form-control" })
+                @*@Html.DropDownList("GenreId", null, htmlAttributes: new { @class = "form-control" })*@
+                @foreach(SelectListItem item in (IEnumerable<SelectListItem>)ViewData["GenreId"])
+                {
+                    <div>
+                        <input type="radio" name="GenreId" value="@item.Value" data-val-required="You must choose album genre" />@item.Text
+                    </div>
+                }
                 @Html.ValidationMessageFor(model => model.GenreId, "", new { @class = "text-danger" })
             </div>
         </div>

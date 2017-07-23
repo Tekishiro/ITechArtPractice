@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SurveySite.Models.Question>
+
+@{
+    ViewBag.Title = "Surveys";
+}
+
+<h2>Surveys</h2>
+
+
+<p>
+    Select from @Model.Count() surveys:
+</p>
+<ul>
+    @foreach(var question in Model)
+    {
+        <li>@Html.ActionLink(question.Text, "Details", 
+            new { id = question.QuestionId })</li>
+    }
+</ul>
