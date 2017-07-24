@@ -71,3 +71,7 @@ E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin
 E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\System.Data.SqlServerCe.dll
 E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\EntityFramework.SqlServerCompact.xml
 E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\obj\Debug\SurveySite.csprojResolveAssemblyReference.cache
+E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\PagedList.dll
+E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\PagedList.Mvc.dll
+E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\PagedList.xml
+E:\Мои файлы\Учеба\Практика\Tasks\SurveySite\SurveySite\bin\PagedList.Mvc.xml

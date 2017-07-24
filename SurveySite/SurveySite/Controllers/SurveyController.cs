@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using SurveySite.Models;
 using SurveySite.ViewModels;
+using PagedList;
 
 namespace SurveySite.Controllers
 {
@@ -17,13 +18,16 @@ namespace SurveySite.Controllers
 
         //List of surveys, divided into pages
         // GET: Survey
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var questions = surveyDb.Questions.ToList();
-            
-            return View(questions);
-        }
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
 
+            List<Question> questions = surveyDb.Questions.ToList();
+            
+            return View(questions.ToPagedList(pageNumber, pageSize));
+        }
+        
 
  
         public ActionResult Details(int? id)

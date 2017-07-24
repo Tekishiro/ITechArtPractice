@@ -15,6 +15,20 @@
              <ul id="navlist">
                      <li class="first"><a href="/" id="current">Home</a></li>
                      <li><a href="/Survey/">Surveys</a></li>
+
+                 @if (!String.IsNullOrEmpty(User.Identity.Name))
+                 {
+                     <li>@Html.ActionLink("Log Off(" + User.Identity.Name + ")", "LogOff", "Account")</li>
+                 }
+                 else
+                 {
+                     <li>@Html.ActionLink("Log On", "LogOn", "Account")</li>
+                 }
+
+                 @if (User.IsInRole("Administrator"))
+                 {
+                     <li>@Html.ActionLink("Manager", "Index", "SurveyManager")</li>
+                 }
                  </ul>
      </div>
     @RenderBody()
